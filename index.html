@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Samil Church Sermon</title>	
+	 <style>
+		.webview {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			outline: none !important;
+		}
+	</style>
+  </head>
+  <body onload="onLoad()">
+	<div>
+		<webview src="https://www.samilchurch.com/sermonsong?m=1" autosize="on" style="min-width:1024px; min-height:768px" class="webview"></webview>
+	<div>     
+	<script type="text/javascript">
+		 onload = () => {
+		  const webview = document.querySelector('webview')
+		}
+	</script>
+  </body>
+</html>

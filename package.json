@@ -1,0 +1,46 @@
+{
+  "name": "samil_church_sermon",
+  "version": "1.0.0",
+  "description": "samil_church_sermon",
+  "productName": "samil church sermon",
+  "main": "main.js",
+  "asar": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . build",
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64",
+	"build:mac": "build --mac"
+  },
+  "repository": "",
+  "author": "belhyun",
+  "devDependencies": {
+    "asar": "^0.14.3",
+    "electron": "^1.8.4",
+    "electron-packager": "^12.0.1",
+    "electron-winstaller": "^2.6.4",
+	"jquery": "^3.3.1"
+  },
+  "build": {
+	  "win": {
+		"target": [
+		  "zip",
+		  "nsis"
+		],
+		"icon": "./Icon.ico"
+	  },
+	  "nsis":{
+		  "oneClick" : false,
+		  "shortcutName": "samil church sermon",
+		  "allowToChangeInstallationDirectory" :true,
+		  "perMachine": true,
+		  "language": 1042,
+		  "shortcutName": "samil church sermon"
+	  },
+	  "directories": {
+		  "buildResources": "resources/installer/",
+		  "output": "dist/",
+		  "app": "."
+	  }
+   }
+}
